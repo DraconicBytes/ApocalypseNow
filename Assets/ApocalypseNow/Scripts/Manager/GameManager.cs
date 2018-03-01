@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 /// <summary>
 /// Hält Referenzen für die Spielscene und steuert Grundlegende Funktionen
 /// </summary>
 public class GameManager : MonoBehaviour {
+    #region Fields
     // IO
     public InputProcessor InputProcessor;
 
@@ -15,13 +15,38 @@ public class GameManager : MonoBehaviour {
     // Level
     public Level Level;
 
-	// Use this for initialization
-	void Start () {
+    // Player
+    public EntityPlayer Player;
+
+    // Game paused
+    [SerializeField]
+    public bool GamePaused { get; private set; }
+    #endregion
+
+    #region Unity Messages
+    /// <summary>
+    /// Use this for initialization
+    /// </summary>
+    void Start () {
 	
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    /// <summary>
+    /// Update is called once per frame
+    /// </summary>
+    void Update () {
 	
 	}
+    #endregion
+
+    #region Messages
+    /// <summary>
+    /// Pauses the game and displays the game menu
+    /// </summary>
+    /// <param name="paused"></param>
+    public void PauseGame(bool paused)
+    {
+
+    }
+    #endregion
 }

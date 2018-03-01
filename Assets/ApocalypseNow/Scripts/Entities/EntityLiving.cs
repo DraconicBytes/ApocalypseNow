@@ -6,6 +6,8 @@ using System.Collections;
 /// </summary>
 public class EntityLiving : Entity {
 
+    protected float MovementSpeed = 0;
+
 	// Use this for initialization
 	void Start () {
 	

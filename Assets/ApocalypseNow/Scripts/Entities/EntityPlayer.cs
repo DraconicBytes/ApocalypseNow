@@ -15,4 +15,10 @@ public class EntityPlayer : EntityLiving {
 	void Update () {
 	
 	}
+
+    public void Move(Vector2 direction)
+    {
+        // Calc movement
+        direction = direction.normalized * MovementSpeed;
+    }
 }
