@@ -1,0 +1,6 @@
+[submodule "2d-extras"]
+	path = 2d-extras
+	url = https://github.com/Unity-Technologies/2d-extras.git
+[submodule "2d-techdemos"]
+	path = 2d-techdemos
+	url = https://github.com/Unity-Technologies/2d-techdemos.git
