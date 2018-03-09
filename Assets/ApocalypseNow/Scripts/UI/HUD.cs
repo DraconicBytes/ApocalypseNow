@@ -6,13 +6,11 @@ using System.Collections;
 /// </summary>
 public class HUD : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	    
-	}
+    public GameManager Manager;
+
+
+    public void MenuButtonPressed()
+    {
+        Manager.PauseGame(true);
+    }
 }

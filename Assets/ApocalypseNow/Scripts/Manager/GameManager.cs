@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Hält Referenzen für die Spielscene und steuert Grundlegende Funktionen
@@ -46,7 +47,32 @@ public class GameManager : MonoBehaviour {
     /// <param name="paused"></param>
     public void PauseGame(bool paused)
     {
+        GamePaused = paused;
+        GameMenu.gameObject.SetActive(paused);
+    }
 
+    /// <summary>
+    /// Restarts the game from the beginning
+    /// </summary>
+    public void RestartGame()
+    {
+        SceneManager.LoadScene("Level");
+    }
+
+    /// <summary>
+    /// Quits the current session and displays the main menu
+    /// </summary>
+    public void GotoMainMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
+
+    /// <summary>
+    /// Closes the application
+    /// </summary>
+    public void ExitGame()
+    {
+        Application.Quit();
     }
     #endregion
 }
